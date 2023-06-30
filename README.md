@@ -1,0 +1,2 @@
+# django-courses
+django-courses
