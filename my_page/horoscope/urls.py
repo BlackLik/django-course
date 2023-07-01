@@ -3,5 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('<str:zodiac>/', views.zodiac, name='zodiac')
+    path('<int:index_zodiac>/', views.index_zodiac, name='index_zodiac'),
+    path('<str:zodiac>/', views.zodiac, name='zodiac'),
+    
 ]
