@@ -30,14 +30,13 @@ def zodiac(request, zodiac: str):
 
     return HttpResponse(all_zodiac[zodiac])
 
+
 def index_zodiac(request, index_zodiac: int):
     global all_zodiac
     zodiac_list = list(all_zodiac.keys())
     if index_zodiac not in range(len(zodiac_list)):
         return HttpResponseNotFound("Zodiac not found")
-    
+
     to_respond = zodiac_list[index_zodiac]
-    
-    
-    
+
     return HttpResponseRedirect(f"../{to_respond}/")

@@ -21,11 +21,14 @@ def get_square_area(request, width):
 def get_circle_area(request, radius):
     return HttpResponse(f"The area of the circle is {3.14 * radius ** 2}")
 
+
 def redirect_to_rectangle_area(request, width, height):
     return HttpResponseRedirect(f"../../../rectangle/{width}/{height}/")
 
+
 def redirect_to_square_area(request, width):
     return HttpResponseRedirect(f"../../square/{width}/")
+
 
 def redirect_to_circle_area(request, radius):
     return HttpResponseRedirect(f"../../circle/{radius}")
